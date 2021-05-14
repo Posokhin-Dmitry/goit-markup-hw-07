@@ -484,12 +484,12 @@ img {
   margin-left: 10px;
 }
 
+/* portfolio */
+
 /* заголовок, который нужно скрыть */
-.hide {
+.project-title {
   display: none;
 }
-
-/* portfolio */
 
 .filters-list {
   margin-bottom: 50px;
@@ -498,11 +498,15 @@ img {
   list-style: none;
 }
 
-.button-item + .button-item {
+.filters-list__item {
   margin-left: 10px;
 }
 
-.filter-button {
+.filters-list__item:first-child {
+  margin-left: 0;
+}
+
+.filters-list__button {
   padding: 6px 22px;
   font-weight: 500;
   line-height: 1.62;
@@ -516,19 +520,15 @@ img {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-button + .filter-button {
-  margin-left: 8px;
-}
-
-.filter-button.current,
-.filter-button:hover,
-.filter-button:focus {
+.filters-list__button.current,
+.filters-list__button:hover,
+.filters-list__button:focus {
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.project-cards {
+.cards-list {
   padding: 0;
   margin: 0;
   display: flex;
@@ -537,13 +537,13 @@ img {
   margin-top: -30px;
 }
 
-.card-item {
+.cards-list__item {
   flex-basis: calc((100% - 90px) / 3);
   margin-left: 30px;
   margin-top: 30px;
 }
 
-.link-card {
+.project-card {
   display: block;
   text-decoration: none;
   border-top-left-radius: 5px;
@@ -551,12 +551,12 @@ img {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-card-thumb {
+.project-card__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.project-overlay {
+.project-card__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -572,16 +572,16 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-card:hover {
+.project-card:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.link-card:hover .project-overlay,
-.link-card:focus .project-overlay {
+.project-card:hover .project-card__overlay,
+.project-card:focus .project-card__overlay {
   transform: translatey(0);
 }
 
-.card-title {
+.project-card__title {
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -589,19 +589,19 @@ img {
   color: var(--title-text-color);
 }
 
-.card-content {
+.project-card__content {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   padding: 20px 24px;
 }
 
-.link-card:focus,
-.link-card:hover {
+.project-card:focus,
+.project-card:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.filter-title {
+.project-card__filter {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
