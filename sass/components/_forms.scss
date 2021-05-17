@@ -18,12 +18,14 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form-comment__textarea:focus,
-.form-field__input:focus {
-  border: 1px solid var(--accent-color);
-  outline: none;
+  &:focus {
+    border: 1px solid var(--accent-color);
+    outline: none;
+  }
+  &:focus + .form-field__icon {
+    fill: var(--accent-color);
+  }
 }
 
 .form-field__label {
@@ -47,10 +49,6 @@
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field__input:focus + .form-field__icon {
-  fill: var(--accent-color);
-}
-
 .form-comment__textarea {
   min-height: 120px;
   padding: 12px 16px;
@@ -62,4 +60,9 @@
   border: 1px solid rgba(29, 19, 19, 0.2);
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border: 1px solid var(--accent-color);
+    outline: none;
+  }
 }

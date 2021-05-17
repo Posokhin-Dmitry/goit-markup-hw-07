@@ -4,10 +4,10 @@
 
 .social-list__item {
   margin-left: 10px;
-}
 
-.social-list__item:first-child {
-  margin-left: 0;
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .social-list__link {
@@ -20,10 +20,10 @@
   fill: #afb1b8;
   background-color: var(--secondary-text-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.social-list__link:hover,
-.social-list__link:focus {
-  fill: var(--secondary-text-color);
-  background-color: var(--accent-color);
+  &:hover,
+  &:focus {
+    fill: var(--secondary-text-color);
+    background-color: var(--accent-color);
+  }
 }
